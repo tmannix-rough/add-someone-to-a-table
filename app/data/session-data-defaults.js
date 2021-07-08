@@ -21,4 +21,12 @@ module.exports = {
 
   // Insert values here
 
+
+  "contacts": [
+                {
+                  "name": "Jane Bigglesworth",
+                  "email": "jbigglesworth@gmail.co.uk"
+                },
+              ]
+
 }

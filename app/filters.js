@@ -37,6 +37,12 @@ module.exports = function (env) {
     documentation.
 
   ------------------------------------------------------------------ */
+  
+  //push items in to an array to be used in a nunjucks macro "| push"
+  filters.push = (array, item) => {
+    array.push(item)
+    return array
+  }
 
   /* ------------------------------------------------------------------
     keep the following line to return your filters to the app

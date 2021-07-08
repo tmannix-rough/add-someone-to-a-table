@@ -1,0 +1,38 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Contacts table - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<!-- phase banner -->
+{% include "includes/phase-banner.html" %}
+
+<!--no back button-->
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+    <!--the contacts table-->
+    {% include "includes/contacts/contacts-table.html" %}
+
+
+
+    <!--add a contact-->
+    {{ govukButton({
+    text: "Set up a new contact",
+    href: "add-a-contact/enter-a-name?contactID="
+    }) }}
+
+
+    </div>
+  </div>
+
+{% endblock %}

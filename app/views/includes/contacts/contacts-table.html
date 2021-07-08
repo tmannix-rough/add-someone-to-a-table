@@ -1,0 +1,31 @@
+
+{# get the contacts array of objects #}
+{% set contacts = data['contacts']%}
+
+
+{# set a blank array for the contact List #}
+{% set contactList = [] %}
+
+{# Loop through the rows and push the contacts into the list, this uses a custom filter "push" this is in filters.js#}
+{% for i in contacts %}
+{% set contactList = contactList | push([
+{text: i.name},
+{text: i.email}
+]) %}
+{% endfor %}
+
+{# create the table and reference the rows array#}
+{{ govukTable({
+  caption: "Contacts table",
+  captionClasses: "govuk-table__caption--l",
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Name"
+    },
+    {
+      text: "Email"
+    }
+  ],
+  rows: contactList
+}) }}
