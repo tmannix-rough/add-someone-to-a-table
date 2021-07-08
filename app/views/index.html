@@ -5,6 +5,15 @@
   Add someone one to a table
 {% endblock %}
 
+{% block beforeContent %}
+
+<!-- phase banner -->
+{% include "includes/phase-banner.html" %}
+
+<!--no back button-->
+
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -35,29 +44,27 @@
 
 
       <h2 class="govuk-heading-m">Explanation of the steps to set up this prototype</h2>
-      <p>There are lots of different ways to add contacts to a table, this is the way that I've learnt to do it in the prototype. This method can be
-      reused for other typs of data.</p>
+      <p>There are lots of different ways to add contacts to a table, this is the way that I've learnt to do it in the prototype. This method is reusable for other types of data.</p>
       <h3 class="govuk-heading-s">Step 1 - Create the table page and stub some data</h3>
-      <p>Create a page for your table and stub some data in your "session-data-defaults.js" file that will represent a finished row.</p>
+      <p>Create a page for your table and stub some data in your "session-data-defaults.js" file that represents a finished row.</p>
       <h3 class="govuk-heading-s">Step 2 - Set up the table</h3>
-      <p>I tend to set my tables as includes in case they need to be reused elsewhere in the prototype, the example table can be found in includes/contacts</p>
-      <p>I borrowed a method off the gov.uk slack channel that uses a custom filter that pushes the table row data in to an array.
-        The recomendation was not to use this in a production environment.</p>
+      <p>I tend to set my tables as "includes" so I can reuse them elsewhere in the prototype. The example table is in includes/contacts.</p>
+      <p>I borrowed a method from the gov.uk slack channel that uses a custom filter that pushes the table row data in to an array.
+        The recommendation was not to use this in a production environment.</p>
       <p>The custom filter is set up in filters.js</p>
       <h3 class="govuk-heading-s">Step 3 - Add a contact build the flow</h3>
-      <p>I tend to put my flows in a subfolder as i find it neater, this flow is in one called "add a contact".</p> <p>More on setting up a question pages can be found in the protokit</p>
+      <p>I tend to put my flows in a subfolder as i find it neater, this flow is in one called "add a contact".</p> <p>More on setting up a question pages is in the main prototype kit.</p>
       <p>The routes for this flow are in routes.js</p>
-      <p>There is an extra bit of routing on the enter a name page, that recognises if someone is setting up a new contact or changing the name from the
-        check your answers page, this is on line 21 of the routes file.</p>
+      <p>There is an extra bit of routing on the enter a name page. This recognises if someone is setting up a new contact or changing the name from the "check your answers" page. See line 21 of the routes file.</p>
       <p>There is also a bit of extra code on the success page that gets the name of the last contact set up, line 27 of "contact-set-up.html" </p>
       <h3 class="govuk-heading-s">Step 4 - Create an object out of your answers and push them in to an array</h3>
-      <p>The last step is to push your answers into the array, the code for this can be found in the routes.js file, lines 50 to 61</p>
+      <p>The last step is to push your answers into the array, the code for this is in the routes.js file, lines 50 to 61</p>
       <p>A couple of things to remember, when you save your routes file, it will blank your session data.</p>
       <p>You can use the |dump in built filter to output what is in the contacts object on the page, useful for debugging.</p>
       <p> e.g. {{data['contacts']|dump}}</p>
       <h3 class="govuk-heading-s">Step 5 - Check it works</h3>
-      <p> Lastly run through all the different routes multiple times and make sure there are no bugs, try going backwards and forwards and using all of the change links.</p>
-      <p>If you don't find anything, then give yourself a pat on the back because your done!</p>
+      <p> Run through all the different routes many times. Make sure there are no bugs, try going backwards and forwards and using all the change links.</p>
+      <p>If you don't find anything, then give yourself a pat on the back because you're done!</p>
 
     </div>
   </div>
