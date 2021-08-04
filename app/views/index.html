@@ -1,8 +1,7 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Add someone one to a table
+Add someone one to a table
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,57 +15,91 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Add someone one to a table
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This prototype is to demonstrate how you can use the prototype kit to create a more complex data model and print those items into a table.
-      </p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Add someone one to a table
+      <span class="govuk-caption-xl">{{releaseVersion}}</span>
+    </h1>{{releaseVersion | log }}
+    <p>
+      This prototype is to demonstrate how you can use the prototype kit to create a more complex data model and print those items into a table.
+    </p>
 
 
-      <h2 class="govuk-heading-m">The table</h2>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="contacts/contacts-info">Contacts table</a>
-        </li>
-      </ul>
+    <h2 class="govuk-heading-m">The table</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="contacts/contacts-info">Contacts table</a>
+      </li>
+    </ul>
 
-      <h2 class="govuk-heading-m">The flow</h2>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="contacts/add-a-contact/enter-a-name">Add someone to the table</a>
-        </li>
-        </ul>
+    <h2 class="govuk-heading-m">The flow</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="contacts/add-a-contact/enter-a-name">Add someone to the table</a>
+      </li>
+    </ul>
 
 
 
-      <h2 class="govuk-heading-m">Explanation of the steps to set up this prototype</h2>
-      <p>There are lots of different ways to add contacts to a table, this is the way that I've learnt to do it in the prototype. This method is reusable for other types of data.</p>
-      <h3 class="govuk-heading-s">Step 1 - Create the table page and stub some data</h3>
-      <p>Create a page for your table and stub some data in your "session-data-defaults.js" file that represents a finished row.</p>
-      <h3 class="govuk-heading-s">Step 2 - Set up the table</h3>
-      <p>I tend to set my tables as "includes" so I can reuse them elsewhere in the prototype. The example table is in includes/contacts.</p>
-      <p>I borrowed a method from the gov.uk slack channel that uses a custom filter that pushes the table row data in to an array.
-        The recommendation was not to use this in a production environment.</p>
-      <p>The custom filter is set up in filters.js</p>
-      <h3 class="govuk-heading-s">Step 3 - Add a contact build the flow</h3>
-      <p>I tend to put my flows in a subfolder as i find it neater, this flow is in one called "add a contact".</p> <p>More on setting up a question pages is in the main prototype kit.</p>
-      <p>The routes for this flow are in routes.js</p>
-      <p>There is an extra bit of routing on the enter a name page. This recognises if someone is setting up a new contact or changing the name from the "check your answers" page. See line 21 of the routes file.</p>
-      <p>There is also a bit of extra code on the success page that gets the name of the last contact set up, line 27 of "contact-set-up.html" </p>
-      <h3 class="govuk-heading-s">Step 4 - Create an object out of your answers and push them in to an array</h3>
-      <p>The last step is to push your answers into the array, the code for this is in the routes.js file, lines 50 to 61</p>
-      <p>A couple of things to remember, when you save your routes file, it will blank your session data.</p>
-      <p>You can use the |dump in built filter to output what is in the contacts object on the page, useful for debugging.</p>
-      <p> e.g. {{data['contacts']|dump}}</p>
-      <h3 class="govuk-heading-s">Step 5 - Check it works</h3>
-      <p> Run through all the different routes many times. Make sure there are no bugs, try going backwards and forwards and using all the change links.</p>
-      <p>If you don't find anything, then give yourself a pat on the back because you're done!</p>
+    <h2 class="govuk-heading-m">Explanation of the steps to set up this prototype</h2>
+    <p class="govuk-body">There are lots of different ways to add contacts to a table, this is the way that I've learnt to do it in the prototype. This method is reusable for other types of data.</p>
+    <h3 class="govuk-heading-s">Step 1 - Create the table page and stub some data</h3>
+    <p class="govuk-body">Create a page for your table and stub some data in your "session-data-defaults.js" file that represents a finished row.</p>
+    <h3 class="govuk-heading-s">Step 2 - Set up the table</h3>
+    <p class="govuk-body">I tend to set my tables as "includes" so I can reuse them elsewhere in the prototype. The example table is in includes/contacts.</p>
+    <p class="govuk-body">I borrowed a method from the gov.uk slack channel that uses a custom filter that pushes the table row data in to an array.
+      The recommendation was not to use this in a production environment.</p>
+    <p class="govuk-body">The custom filter is set up in filters.js</p>
+    <h3 class="govuk-heading-s">Step 3 - Add a contact build the flow</h3>
+    <p class="govuk-body">I tend to put my flows in a subfolder as i find it neater, this flow is in one called "add a contact".</p>
+    <p>More on setting up a question pages is in the main prototype kit.</p>
+    <p class="govuk-body">The routes for this flow are in routes.js</p>
+    <p class="govuk-body">There is an extra bit of routing on the enter a name page. This recognises if someone is setting up a new contact or changing the name from the "check your answers" page. See line 21 of the routes file.</p>
+    <p class="govuk-body">There is also a bit of extra code on the success page that gets the name of the last contact set up, line 27 of "contact-set-up.html" </p>
+    <h3 class="govuk-heading-s">Step 4 - Create an object out of your answers and push them in to an array</h3>
+    <p class="govuk-body">The last step is to push your answers into the array, the code for this is in the routes.js file, lines 50 to 61</p>
+    <p class="govuk-body">A couple of things to remember, when you save your routes file, it will blank your session data.</p>
+    <p class="govuk-body">You can use the |dump in built filter to output what is in the contacts object on the page, useful for debugging.</p>
+    <p class="govuk-body"> e.g. {{data['contacts']|dump}}</p>
+    <h3 class="govuk-heading-s">Step 5 - Check it works</h3>
+    <p class="govuk-body"> Run through all the different routes many times. Make sure there are no bugs, try going backwards and forwards and using all the change links.</p>
+    <p class="govuk-body">If you don't find anything, then give yourself a pat on the back because you're done!</p>
 
-    </div>
+
+    <h2 class="govuk-heading-m">Update - Removing contacts from the table</h2>
+    <h3 class="govuk-heading-s">Step 1 - Set up a shell page for removing a contact</h3>
+    <p class="govuk-body">In the prototype i put this in a folder called “remove-a-contact” and the page is called “youre-about-to-remove-a-contact”.
+      Add a link to this page to the table, use the same method to create another column in the table. This time it needs a few more details as it needs to be a hyperlink. Make sure you add the hidden text for screen reader context. You then need to
+      add an extra part to the URL reference that will tell us the index of the object you want to remove. E.g. The remove link in row 1 will tell us that the user wants to remove the first object in the array of objects. In this case Jane from the
+      contacts list. We do this by using an inbuilt nunjucks filter called loop.index. We need to add a 0 to the end to make sure it starts counting from 0. In an array the item in the first position is in position 0. Second item is 1 and so on.</p>
+    <h3 class="govuk-heading-s">Step 2 - Populate the page</h3>
+    <p class="govuk-body">Now you can populate your shell page with the details of the contact you want to remove by using the contact ID reference that has been passed through the URL from the table.</p>
+    <h3 class="govuk-heading-s">Step 3 - Remove the contact</h3>
+    <p class="govuk-body">Once the user confirms on this page that they do want to remove the contact from the table we need to remove that object from our contacts array of objects. We do this by using splice and the contact ID for the position. You
+      can set this up in your routes file using the post method. You then have a choice of what to do, you could:</p>
+    <ul class="govuk-list govuk-list--number">
+      <li>Redirect back to the table and hope that by removing the row the user understands that they have successfully removed the contact. </li>
+      <li> You could redirect to a success page that confirms that the contact has been removed.</li>
+      <li>You could redirect back to the table and show a success banner.</li>
+    </ul>
+    <p class="govuk-body">Whilst option 2 is probably the easiest, for removing a contact it feels a little bit clunky to me. The prototype uses the 3rd option.</p>
+    <h3 class="govuk-heading-s">Step 4 - Set up the notification banner</h3>
+    <p class="govuk-body">Set up the notification banner as an include. This banner needs to show the name of the contact that has just been removed so we need to set up a new variable to capture the name of the contact just before it is removed.
+      I’ve done this in the routes file just before the contact is spliced. “req.session.data.removedName = req.session.data.contacts[contactID]['name']” We can then use this variable in the success banner.</p>
+    <h3 class="govuk-heading-s">Step 5 - Add the banner to the page</h3>
+    <p class="govuk-body">Now you need to add the notification banner to the “contact-info” page. Once it is there you now need to make sure it shows only when a contact has been removed. You can do this by creating another variable, i’ve done this
+      in the session-data-default and setting it to false. Then in the routes file again after the contact has been spliced from the object set the banner variable to “true”. Then on the contact info page wrap the banner in an if statement to check
+      whether this variable is true or not.</p>
+    <h3 class="govuk-heading-s">Step 6 - Tidy up</h3>
+    <p class="govuk-body">Now you just need to do a bit of tidying up. To make sure the banner is not persistent the whole time after the contact has been removed. You need to set the banner variable back to false. I do this on the GET call for the
+      contact-info page, this way if that page is navigated away from or refreshed the banner will stop showing.</p>
+    <h3 class="govuk-heading-s">Step 7 - Handle the exception</h3>
+    <p class="govuk-body">The last thing to handle is what happens if someone removes all of the contacts in a table. I do this by wrapping the table itself in an if statement and checking whether there are any items in contacts, if there are then
+      show the table else show a message instead. You could always do this another way and check after the contact is spliced and redirect somewhere else if there are no contacts left.</p>
+
+
   </div>
+</div>
 
 {% endblock %}

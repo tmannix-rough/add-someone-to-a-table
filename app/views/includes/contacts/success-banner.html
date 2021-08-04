@@ -1,0 +1,10 @@
+{% set html %}
+
+{% endset %}
+
+{{ govukNotificationBanner({
+  html: '<h3 class="govuk-notification-banner__heading">'
+    + data.removedName +  ' has been removed from the table
+  </h3>',
+  type: 'success'
+}) }}

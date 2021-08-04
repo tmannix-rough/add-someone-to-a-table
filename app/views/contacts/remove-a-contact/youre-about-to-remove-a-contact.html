@@ -1,7 +1,8 @@
 {% extends "layout.html" %}
 
 <!--set page title-->
-{% set title = "Check your answers" %}
+<!--On this page we use the contact ID that we passed through the URL to know the position of the contact in our object-->
+{% set title = "You're about to remove " + data.contacts[data.contactID].name %}
 
 
 
@@ -26,7 +27,7 @@
      <h2 class="govuk-heading-m">Contact details</h2>
 
 
-
+      <!--On this page we use the contact ID that we passed through the URL to know the position of the contact in our object, we use it to get the correct name and email in the summary list-->
       {{ govukSummaryList({
     rows: [
       {
@@ -34,16 +35,7 @@
           text: "Name"
         },
         value: {
-          text: data['name']|default("Jane Bigglesworth")
-        },
-        actions: {
-          items: [
-            {
-              href: "enter-a-name",
-              text: "Change",
-              visuallyHiddenText: "name"
-            }
-          ]
+          text: data.contacts[data.contactID].name|default("Jane Bigglesworth")
         }
       },
       {
@@ -51,23 +43,14 @@
           text: "Email"
         },
         value: {
-          text: data['email']|default("jbigglesworth@gmail.co.uk")
-        },
-        actions: {
-          items: [
-            {
-              href: "enter-an-email",
-              text: "Change",
-              visuallyHiddenText: "email"
-            }
-          ]
+          text: data.contacts[data.contactID].email|default("jbigglesworth@gmail.co.uk")
         }
       }
     ]
   }) }}
 
       {{ govukButton({
-  text: "Confirm"
+  text: "Remove contact"
 }) }}
 
     </form>

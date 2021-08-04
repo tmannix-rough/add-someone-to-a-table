@@ -27,6 +27,8 @@ module.exports = {
                   "name": "Jane Bigglesworth",
                   "email": "jbigglesworth@gmail.co.uk"
                 },
-              ]
+              ],
+
+  "successBanner": "false",
 
 }

@@ -3,7 +3,16 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
+///Contact table
+router.get('/contacts/contacts-info', function(req, res) {
 
+  //set back to the previous page
+  req.session.data.back = req.headers.referer
+
+  req.session.data.successBanner = "false"
+
+  res.render('contacts/contacts-info');
+});
 
 ////////////////////////////////////////////
 ////////ADD A CONTACT
@@ -47,22 +56,22 @@ router.get('/contacts/add-a-contact/check-your-answers', function(req, res) {
 router.post('/contacts/add-a-contact/check-your-answers', function(req, res) {
 
 
-    // session data
-    let name = req.session.data['name']
-    let email = req.session.data['email']
+  // session data
+  let name = req.session.data['name']
+  let email = req.session.data['email']
 
-    // make an object to hold data
-    let newContact = {
-      name,
-      email
-    };
+  // make an object to hold data
+  let newContact = {
+    name,
+    email
+  };
 
-    // add the new contact object to the contacts array
-    req.session.data.contacts.push(newContact);
+  // add the new contact object to the contacts array
+  req.session.data.contacts.push(newContact);
 
-    //blank the name and email in case another contact is added
-    req.session.data.name = ""
-    req.session.data.email = ""
+  //blank the name and email in case another contact is added
+  req.session.data.name = ""
+  req.session.data.email = ""
 
   res.redirect('/contacts/add-a-contact/contact-set-up');
 });
@@ -76,6 +85,38 @@ router.get('/contacts/add-a-contact/contact-set-up', function(req, res) {
 });
 
 
+////////////////////////////////////////////
+////////REMOVE A CONTACT
 
+//Enter a name
+router.get('/contacts/remove-a-contact/youre-about-to-remove-a-contact', function(req, res) {
+
+  //set back to the previous page
+  req.session.data.back = req.headers.referer
+  res.render('contacts/remove-a-contact/youre-about-to-remove-a-contact');
+});
+
+router.post('/contacts/remove-a-contact/youre-about-to-remove-a-contact', function(req, res) {
+
+  //get the ID of the contact that you want to remove
+  let contactID = req.session.data['contactID']
+
+  //get the contacts List
+  let contacts = req.session.data['contacts']
+
+  //set the removed contacts name to so we can use it in the success banner after it has been removed
+  req.session.data.removedName = req.session.data.contacts[contactID]['name']
+
+  //remove the object that is in the position set by the contact ID
+  if (contactID > -1) {
+    contacts.splice(contactID, 1);
+  }
+
+  //set success banner to true
+  req.session.data.successBanner = "true"
+
+  res.redirect('/contacts/contacts-info');
+
+});
 
 module.exports = router
