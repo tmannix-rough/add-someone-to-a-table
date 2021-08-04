@@ -28,7 +28,7 @@ module.exports = {
                   "email": "jbigglesworth@gmail.co.uk"
                 },
               ],
-
+  //a var to set the success banner to show or not, default is not.
   "successBanner": "false",
 
 }
