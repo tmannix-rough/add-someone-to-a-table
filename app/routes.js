@@ -9,6 +9,7 @@ router.get('/contacts/contacts-info', function(req, res) {
   //set back to the previous page
   req.session.data.back = req.headers.referer
 
+  //set the success banner back to false this will mean the banner will only show once for the user
   req.session.data.successBanner = "false"
 
   res.render('contacts/contacts-info');
