@@ -1,0 +1,56 @@
+{# get the licences array of objects #}
+{% set licences = data['licences']%}
+
+
+
+{# set a blank array for the licence List #}
+{% set licenceList = [] %}
+
+
+{# Loop through the rows and push the contacts into the list, this uses a custom filter "push" this is in filters.js#}
+{# The third column is a little different, it contains the link to remove the row, we do this by using the loop index to know the position of the name in our object#}
+{% for i in contacts %}
+{% set anchor = "remove-a-contact/youre-about-to-remove-a-contact?contactID=" + loop.index0 %}
+{% set contactList = contactList | push([
+{text: i.name},
+{text: i.email},
+{html: '<a class="govuk-link" href="remove-a-contact/youre-about-to-remove-a-contact?contactID=' +  loop.index0 +'">
+        Remove<span class="govuk-visually-hidden">' + i.name + '</span>
+      </a>'}
+]) %}
+{% endfor %}
+
+{# Loop through the rows and push the licences into the list, this uses a custom filter "push" this is in filters.js#}
+{# The first column is a little different, it contains the link to get to the licence summary, we do this by using the loop index to know the position of the licenceNumber in our object#}
+{% for i in licences %}
+{% set licenceList = licenceList | push([
+  {html: '<a class="govuk-link" href="/licences/licence-summary?licenceID=' +  loop.index0 +'">' +
+          i.licenceNumber + '
+        </a>'},
+{text: i.licenceName},
+{text: i.startDate},
+{text: i.endDate}
+]) %}
+{% endfor %}
+
+{# create the table and reference the rows array#}
+{{ govukTable({
+  caption: "Licences",
+  captionClasses: "govuk-table__caption--l",
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Licence number"
+    },
+    {
+      text: "Licence name"
+    },
+    {
+      text: "Start date"
+    },
+    {
+      text: "End date"
+    }
+  ],
+  rows: licenceList
+}) }}

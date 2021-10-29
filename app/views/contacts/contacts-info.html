@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Contacts table - GOV.UK
+Customer - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -18,7 +18,7 @@ Contacts table - GOV.UK
 <!--if a contact has been removed show the success banner-->
 {% if data.successBanner === "true" %}
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-full">
 
     <!--the success banner-->
     {% include "includes/contacts/success-banner.html"%}
@@ -27,16 +27,27 @@ Contacts table - GOV.UK
 </div>
 {% endif%}
 
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">Customer</span>
+      Bottled Water Plc
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
 
 
+    {% set contactsHtml %}
     <!--if there are contacts show the table else show a message instead-->
     {% if data.contacts.length %}
     <!--the contacts table-->
     {% include "includes/contacts/contacts-table.html" %}
     {% else %}
-    <h1 class="govuk-heading-s">There aren't any contacts to display</h1>
+    <p class="govuk-body">There aren't any contacts to display</p>
     {% endif %}
 
 
@@ -45,6 +56,39 @@ Contacts table - GOV.UK
     text: "Set up a new contact",
     href: "add-a-contact/enter-a-name?contactID="
     }) }}
+    {% endset -%}
+
+
+    {% set licencesHtml %}
+
+    {% include "includes/licences/licences-table.html" %}
+
+    {% endset -%}
+
+
+
+    {{ govukTabs({
+      items: [
+      {
+        label: "Licences",
+        id: "Licences",
+        panel: {
+          html: licencesHtml
+        }
+      },
+        {
+          label: "Contacts",
+          id: "contacts",
+          panel: {
+            html: contactsHtml
+          }
+        }
+      ]
+    }) }}
+
+
+
+
 
 
   </div>
