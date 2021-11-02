@@ -38,10 +38,34 @@ Licence summary - GOV.UK
       rows: [
         {
           key: {
-            text: "Licence name"
+            text: "License name"
           },
           value: {
-            text: licences[data.licenceID].licenceName
+            text: licences[data.licenceID].licenceName| safe
+          }
+        },
+        {
+          key: {
+            text: "Effective from"
+          },
+          value: {
+            text: licences[data.licenceID].startDate
+          }
+        },
+        {
+          key: {
+            text: "End date"
+          },
+          value: {
+            text: licences[data.licenceID].endDate
+          }
+        },
+        {
+          key: {
+            text: "License holder"
+          },
+          value: {
+            text: licences[data.licenceID].licenceHolder| safe
           }
         },
         {
@@ -50,6 +74,46 @@ Licence summary - GOV.UK
           },
           value: {
             text: licences[data.licenceID].sourceOfSupply
+          }
+        },
+        {
+          key: {
+            text: "Purpose"
+          },
+          value: {
+            text: licences[data.licenceID].purpose
+          }
+        },
+        {
+          key: {
+            text: "Period of abstraction"
+          },
+          value: {
+            text: licences[data.licenceID].periodOfAbstraction
+          }
+        },
+        {
+          key: {
+            text: "Points of abstraction"
+          },
+          value: {
+            text: licences[data.licenceID].pointsOfAbstraction| safe
+          }
+        },
+        {
+          key: {
+            text: "Abstraction conditions"
+          },
+          value: {
+            text: licences[data.licenceID].abstractionConditions| safe
+          }
+        },
+        {
+          key: {
+            text: "Abstraction amounts"
+          },
+          value: {
+            text: licences[data.licenceID].abstractionAmounts| safe
           }
         }
       ]
