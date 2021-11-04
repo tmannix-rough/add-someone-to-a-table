@@ -24,8 +24,12 @@ module.exports = {
 
   "contacts": [
                 {
+                  "name": "Bottled Water Plc (Head Office)",
+                  "email": "headoffice@bwplc.co.uk"
+                },
+                {
                   "name": "Jane Bigglesworth",
-                  "email": "jbigglesworth@gmail.co.uk"
+                  "email": "jbigglesworth@bwplc.co.uk"
                 },
               ],
 
@@ -35,60 +39,57 @@ module.exports = {
                   "licenceName": "Glindenfold Lake",
                   "startDate": "1 January 2019",
                   "endDate": "31 December 2029",
-                  "licenceHolder": "Bottled Water Plc  <br> <a href=contacts.html>View contact details</a>",
+                  "licenceHolder": "Bottled Water Plc  <br> <a href=/contacts/contacts-info#contacts>View contacts</a>",
                   "sourceOfSupply": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
                   "purpose": "Spray irrigation",
                   "periodOfAbstraction": "March to September",
                   "pointsOfAbstraction": "At National Grid Reference SK 675124 <br> At National Grid Reference SK 675343 <br> <a href=points.html>View details of abstraction point</a>",
                   "abstractionConditions": "Eel screening condition <br> Flow cessation condition <br> Chemical cessation condition <br> <a href=app/views/licences/licences-table.html>View details of abstraction conditions</a>",
                   "abstractionAmounts": "90 cubic metres per hour <br> 250 cubic metres per day <br> 20,000 cubnic metres per year",
-                  "contactsName": "Scifford Pike contacts",
                   "contactsHolder": "Bottled Water Plc",
                   "contactsAddress": "72 Guild Street <br> London <br> SE23 6FH",
                   "contactsDetails": "07700 900457 <br> waterteam@bottledwater.com",
-                  "pointsAbstraction1": "At National Grid Reference SK 675 124 (GLENTHAM BOREHOLE NO.1)",  
-                  "pointsAbstraction2": "At National Grid Reference SK 675 343 (GLENTHAM BOREHOLE NO.2)", 
-                  "pointsAbstraction3": "At National Grid Reference SK 675 241 (GLENTHAM BOREHOLE NO.3)"                
+                  "pointsAbstraction1": "At National Grid Reference SK 675 124 (GLENTHAM BOREHOLE NO.1)",
+                  "pointsAbstraction2": "At National Grid Reference SK 675 343 (GLENTHAM BOREHOLE NO.2)",
+                  "pointsAbstraction3": "At National Grid Reference SK 675 241 (GLENTHAM BOREHOLE NO.3)"
                 },
                 {
                   "licenceNumber": "AN/02/233/003/0034",
                   "licenceName": "Bourton river",
                   "startDate": "1 January 2017",
                   "endDate": "31 December 2025",
-                  "licenceHolder": "Big Smith Farms Ltd <br> <a href=contacts.html>View contact details</a>",
+                  "licenceHolder": "Bottled Water Plc  <br> <a href=/contacts/contacts-info#contacts>View contacts</a>",
                   "sourceOfSupply": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
                   "purpose": "Spray irrigation",
                   "periodOfAbstraction": "March to September",
                   "pointsOfAbstraction": "At National Grid Reference SK 675124 <br> At National Grid Reference SK 675343 <br> <a href=points.html>View details of abstraction point</a>",
                   "abstractionConditions": "Eel screening condition <br> Flow cessation condition <br> Chemical cessation condition <br> <a href=app/views/licences/licences-table.html>View details of abstraction conditions</a>",
                   "abstractionAmounts": "90 cubic metres per hour <br> 250 cubic metres per day <br> 20,000 cubnic metres per year",
-                  "contactsName": "Something",
                   "contactsHolder": "Big Smith Farms ltd",
                   "contactsAddress": "72 Guild Street <br> London <br> SE23 6FH",
                   "contactsDetails": "07700 900457 <br> waterteam@bottledwater.com",
-                  "pointsAbstraction1": "At National Grid Reference SK 675 124 (GLENTHAM BOREHOLE NO.1)",  
-                  "pointsAbstraction2": "At National Grid Reference SK 675 343 (GLENTHAM BOREHOLE NO.2)", 
-                  "pointsAbstraction3": "At National Grid Reference SK 675 241 (GLENTHAM BOREHOLE NO.3)"                
+                  "pointsAbstraction1": "At National Grid Reference SK 675 124 (GLENTHAM BOREHOLE NO.1)",
+                  "pointsAbstraction2": "At National Grid Reference SK 675 343 (GLENTHAM BOREHOLE NO.2)",
+                  "pointsAbstraction3": "At National Grid Reference SK 675 241 (GLENTHAM BOREHOLE NO.3)"
                 },
                 {
                   "licenceNumber": "AN/02/233/003/0093",
                   "licenceName": "Honeydew Crescent",
                   "startDate": "5 September 2020",
                   "endDate": "15 September 2034",
-                  "licenceHolder": "D. B. Beecham-Smith <br> <a href=contacts.html>View contact details</a>",
+                  "licenceHolder": "Bottled Water Plc  <br> <a href=/contacts/contacts-info#contacts>View contacts</a>",
                   "sourceOfSupply": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
                   "purpose": "Spray irrigation",
                   "periodOfAbstraction": "February to December",
                   "pointsOfAbstraction": "At National Grid Reference SK 675124 <br> At National Grid Reference SK 675343 <br> <a href=points.html>View details of abstraction point</a>",
                   "abstractionConditions": "Eel screening condition <br> Flow cessation condition <br> Chemical cessation condition <br> <a href=app/views/licences/licences-table.html>View details of abstraction conditions</a>",
                   "abstractionAmounts": "90 cubic metres per hour <br> 250 cubic metres per day <br> 20,000 cubnic metres per year",
-                  "contactsName": "Something else",
                   "contactsHolder": "D. B. Beecham-Smith",
                   "contactsAddress": "72 Guild Street <br> London <br> SE23 6FH",
                   "contactsDetails": "07700 900457 <br> waterteam@bottledwater.com",
-                  "pointsAbstraction1": "At National Grid Reference SK 675 124 (GLENTHAM BOREHOLE NO.1)",  
-                  "pointsAbstraction2": "At National Grid Reference SK 675 343 (GLENTHAM BOREHOLE NO.2)", 
-                  "pointsAbstraction3": "At National Grid Reference SK 675 241 (GLENTHAM BOREHOLE NO.3)" 
+                  "pointsAbstraction1": "At National Grid Reference SK 675 124 (GLENTHAM BOREHOLE NO.1)",
+                  "pointsAbstraction2": "At National Grid Reference SK 675 343 (GLENTHAM BOREHOLE NO.2)",
+                  "pointsAbstraction3": "At National Grid Reference SK 675 241 (GLENTHAM BOREHOLE NO.3)"
                 }
               ],
 
