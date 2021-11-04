@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Licence summary - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<!-- phase banner -->
+{% include "includes/phase-banner.html" %}
+
+<!--no back button-->
+
+{% endblock %}
+
+{% block content %}
+
+
+{# get the licences array of objects #}
+{% set licences = data['licences']%}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">Licence {{licences[data.licenceID].licenceNumber}}</span>
+      {{licences[data.licenceID].contactsName}}
+    </h1>
+    <h2 class="govuk-heading-m">Licence holder</h2>
+    <p class="govuk-body govuk-!-font-size-24 govuk-!-margin-bottom-6">We will use the main contact to get in touch about conditions and changes to this licence</p>
+
+    <div class="govuk-!-margin-bottom-9">
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Name"
+          },
+          value: {
+            text: licences[data.licenceID].contactsHolder| safe
+          }
+        },
+        {
+          key: {
+            text: "Address"
+          },
+          value: {
+            text: licences[data.licenceID].contactsAddress| safe
+          }
+        },
+        {
+          key: {
+            text: "Contact details"
+          },
+          value: {
+            text: licences[data.licenceID].contactsDetails| safe
+          }
+        }
+      ]
+    }) }}
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Licence summary - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<!-- phase banner -->
+{% include "includes/phase-banner.html" %}
+
+<!--no back button-->
+
+{% endblock %}
+
+{% block content %}
+
+
+{# get the licences array of objects #}
+{% set licences = data['licences']%}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">Licence {{licences[data.licenceID].licenceNumber}}</span>
+      {{licences[data.licenceID].contactsName}}
+    </h1>
+
+    <div class="govuk-!-margin-bottom-9">
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Points of abstraction"
+
+          },
+          value: {
+            text: licences[data.licenceID].pointsAbstraction1| safe
+          }
+        },
+        {
+          value: {
+            text: licences[data.licenceID].pointsAbstraction2| safe
+          }
+        },
+        {
+          value: {
+            text: licences[data.licenceID].pointsAbstraction3| safe
+          }
+        }
+      ]
+    }) }}
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

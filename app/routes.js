@@ -120,4 +120,10 @@ router.post('/contacts/remove-a-contact/youre-about-to-remove-a-contact', functi
 
 });
 
+
+//View contacts page from license summary
+//router.get('/licences/contacts', function(req, res) {
+  //res.render('/licences/contacts');
+//});
+
 module.exports = router
