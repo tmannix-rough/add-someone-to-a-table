@@ -25,7 +25,7 @@ Licence summary - GOV.UK
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-l">
       <span class="govuk-caption-l">Licence {{licences[data.licenceID].licenceNumber}}</span>
-      {{licences[data.licenceID].licenceName}}
+      {{licences[data.licenceID].contactsName}}
     </h1>
 
     <div class="govuk-!-margin-bottom-9">
@@ -34,7 +34,6 @@ Licence summary - GOV.UK
         {
           key: {
             text: "Points of abstraction"
-
           },
           value: {
             text: licences[data.licenceID].pointsAbstraction1| safe

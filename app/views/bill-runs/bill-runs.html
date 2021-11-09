@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Customer - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<!-- phase banner -->
+{% include "includes/phase-banner.html" %}
+
+<!-- nav bar -->
+
+{% include "includes/nav/nav-bd-view.html" %}
+
+<!--no back button-->
+
+{% endblock %}
+
+{% block content %}
+
+<!-- {% set billRunsHtml %}
+    if there are contacts show the table else show a message instead
+    {% if data.billRuns.length %}
+    the contacts table--> 
+    {% include "includes/bill-runs/bill-runs-table.html" %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-!-margin-bottom-3"></div>
+
+<!-- page title -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+
+    <!-- page heading -->
+    <!-- <span class="govuk-caption-l">Batch 003265 / 12 June 2019</span> -->
+    <h1 class="govuk-heading-xl">Bill runs</h1>
+<form method="post" novalidate>
+    {{ govukButton({
+      text: "Create a bill run"
+    }) }}
+
+
+    {% include "includes/bill-runs/bill-runs-table.html" %}
+
+</form>
+  </div>
+</div>
+{% endblock %}

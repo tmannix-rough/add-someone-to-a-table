@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Customer - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<!-- phase banner -->
+{% include "includes/phase-banner.html" %}
+
+<!-- nav bar -->
+
+{% include "includes/nav/nav-bd-view.html" %}
+
+<!--no back button-->
+
+{% endblock %}
+
+{% block content %}
+<nav id="nav" class="navbar">
+    <ul class="navbar__list">
+ 
+      <li class="navbar__item">
+        <a class="navbar__link  navbar__link--active govuk-link--no-visited-state" href="contacts-info" id="view">
+          Search
+        </a>
+      </li>
+ 
+      <li class="navbar__item">
+        <a class="navbar__link govuk-link--no-visited-state" href="" id="bill-runs">
+          Bill runs
+        </a>
+      </li>
+ 
+      <li class="navbar__item">
+        <a class="navbar__link govuk-link--no-visited-state" href="/bd/manage" id="manage">
+          Manage
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+{% endblock %}

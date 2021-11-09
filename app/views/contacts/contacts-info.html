@@ -9,11 +9,17 @@ Customer - GOV.UK
 <!-- phase banner -->
 {% include "includes/phase-banner.html" %}
 
+<!-- nav bar -->
+
+{% include "includes/nav/nav-bd-view.html" %}
+
 <!--no back button-->
 
 {% endblock %}
 
 {% block content %}
+
+
 
 <!--if a contact has been removed show the success banner-->
 {% if data.successBanner === "true" %}
