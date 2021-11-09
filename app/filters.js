@@ -37,12 +37,38 @@ module.exports = function (env) {
     documentation.
 
   ------------------------------------------------------------------ */
-  
+
   //push items in to an array to be used in a nunjucks macro "| push"
   filters.push = (array, item) => {
     array.push(item)
     return array
   }
+
+  //set colours for status "| tagColour"
+    filters.tagColour = function(e) {
+      if (e == "Inactive") {
+        return "govuk-tag--grey"
+      } else if (e == "sent") {
+        return "govuk-tag--green"
+      } else if (e == "something") {
+        return "govuk-tag--turquoise"
+      } else if (e == "Pending") {
+        return "govuk-tag--blue"
+      } else if (e == "Received") {
+        return "govuk-tag--purple"
+      } else if (e == "Sent") {
+        return "govuk-tag--pink"
+      } else if (e == "Rejected") {
+        return "govuk-tag--red"
+      } else if (e == "Declined") {
+        return "govuk-tag--orange"
+      } else if (e == "Delayed") {
+        return "govuk-tag--yellow"
+      } else {
+        return ""
+      }
+    }
+
 
   /* ------------------------------------------------------------------
     keep the following line to return your filters to the app

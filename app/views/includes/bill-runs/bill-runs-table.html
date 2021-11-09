@@ -3,27 +3,31 @@
 
 
 
+
 {# set a blank array for the billruns List #}
 {% set billRunsList = [] %}
+
+
+
 
 
 {# Loop through the rows and push the licences into the list, this uses a custom filter "push" this is in filters.js#}
 {# The first column is a little different, it contains the link to get to the licence summary, we do this by using the loop index to know the position of the licenceNumber in our object#}
 {% for i in billRuns %}
 {% set billRunsList = billRunsList | push([
-  {html: '<a class="govuk-link" href="/bill-runs/bill-runs?billRunsID=' +  loop.index0 +'">' +
-          i.billRunsNumber + '
-        </a>'},
 {text: i.billRunsDate},
 {text: i.billRunsRegion},
 {text: i.billRunsType},
 {text: i.billRunsBills},
 {text: i.billRunsValue},
-{text: i.billRunsStatus}
+{html: govukTag({
+          text: i.billRunsStatus,
+          classes: i.billRunsStatus | tagColour
+        })}
 ]) %}
 {% endfor %}
 
-{# create the table and reference the rows array#}
+{# create the table and reference the rows array #}
 {{ govukTable({
   caption: "Bill runs",
   captionClasses: "govuk-table__caption--l",

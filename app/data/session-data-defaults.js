@@ -94,8 +94,16 @@ module.exports = {
               ],
 
 
-
-
+"billRuns": [
+              {
+                "billRunsDate": "22 December 2020",
+                "billRunsRegion": "Anglian",
+                "billRunsType": "Annual",
+                "billRunsBills": "1",
+                "billRunsValue": "£1,000",
+                "billRunsStatus": "Rejected",
+              },
+            ],
 
   //a var to set the success banner to show or not, default is not.
   "successBanner": "false",
