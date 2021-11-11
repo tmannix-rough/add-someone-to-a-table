@@ -1,6 +1,10 @@
 const express = require('express')
 const router = express.Router()
 
+
+// Sandbox, remember to add older sprint when adding a new folder!
+router.use('/notices', require('./views/_routes/_routes-notices'));
+
 // Add your routes here - above the module.exports line
 
 ///Contact table
