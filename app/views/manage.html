@@ -17,28 +17,104 @@ Customer - GOV.UK
 
 {% endblock %}
 
-{% block content %}
-<nav id="nav" class="navbar">
-    <ul class="navbar__list">
- 
-      <li class="navbar__item">
-        <a class="navbar__link  navbar__link--active govuk-link--no-visited-state" href="contacts-info" id="view">
-          Search
-        </a>
-      </li>
- 
-      <li class="navbar__item">
-        <a class="navbar__link govuk-link--no-visited-state" href="" id="bill-runs">
-          Bill runs
-        </a>
-      </li>
- 
-      <li class="navbar__item">
-        <a class="navbar__link govuk-link--no-visited-state" href="/bd/manage" id="manage">
-          Manage
-        </a>
-      </li>
 
-    </ul>
-  </nav>
+{% block content %}
+
+<!-- page title -->
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+          
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  
+      <h1 class="govuk-heading-l">
+        Manage reports and notices
+      </h1>
+  
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  
+      <h2 class="govuk-heading-m">
+        View reports
+      </h2>
+  
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="download-a-charging-forecast-report">
+            Download a charging forecast report
+          </a>
+        </li>
+        <li>
+          <a class="govuk-link" href="returns/returns-overview">
+            Returns cycles
+          </a>
+        </li>
+        <li>
+          <a class="govuk-link" href="iterations/licence-notices/notification-report">
+            Notices
+          </a>
+        </li>
+        <!-- <li>
+          <a class="govuk-link" href="void-returns">
+            Void returns
+          </a>
+        </li> -->
+      </ul>
+  
+      <h2 class="govuk-heading-m">
+        Send return notices
+      </h2>
+  
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="returns/send-return-reminders">
+            Invitations
+          </a>
+        </li>
+        <li>
+          <a class="govuk-link" href="manage/send-paper">
+            Paper forms
+          </a>
+        </li>
+        <li>
+          <a class="govuk-link" href="returns/send-return-reminders">
+            Reminders
+          </a>
+        </li>
+      </ul>
+  
+      <h2 class="govuk-heading-m">
+        Manage users
+      </h2>
+  
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="internal-user/create-account">
+            Create an internal account
+          </a>
+        </li>
+      </ul>
+  
+      <h2 class="govuk-heading-m">
+        Billing
+      </h2>
+  
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="charges-2020/pick-charge-type">
+            Create a bill run
+          </a>
+        </li>
+        <li>
+          <a class="govuk-link" href="charges-2020/bill-runs">
+            View past and open bill runs
+          </a>
+        </li>
+      </ul>
+  
+  
+
 {% endblock %}

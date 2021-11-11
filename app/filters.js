@@ -54,7 +54,7 @@ module.exports = function (env) {
         return "govuk-tag--turquoise"
       } else if (e == "Pending") {
         return "govuk-tag--blue"
-      } else if (e == "Received") {
+      } else if (e == "ready") {
         return "govuk-tag--purple"
       } else if (e == "Sent") {
         return "govuk-tag--pink"
