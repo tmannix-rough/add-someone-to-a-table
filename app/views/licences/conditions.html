@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Abstraction conditions - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+<!-- phase banner -->
+{% include "includes/phase-banner.html" %}
+
+<!--no back button-->
+
+{% endblock %}
+
+{% block content %}
+
+
+{# get the licences array of objects #}
+{% set licences = data['licences']%}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">Licence {{licences[data.licenceID].licenceNumber}}</span>
+      {{licences[data.licenceID].licenceName}}
+    </h1>
+
+    <div class="govuk-!-margin-bottom-9">
+        <h2 class="govuk-heading-m">Eel screening condition</h2>
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Screening",
+            classes: "govuk-body govuk-!-font-weight-regular"
+          },
+          value: {
+            text: licences[data.licenceID].conditionsScreening| safe
+          }
+        }
+        
+      ]
+    }) }}
+    <h2 class="govuk-heading-m">Hands off flow condition</h2>
+    {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Purpose",
+              classes: "govuk-body govuk-!-font-weight-regular"
+            },
+              value: {
+              text: licences[data.licenceID].conditionsPurpose| safe
+            }
+          },
+          {
+              key: {
+            text: "Gauging station",
+            classes: "govuk-body govuk-!-font-weight-regular"
+          },
+            value: {
+              text: licences[data.licenceID].conditionsGauging| safe
+            }
+          },
+          {
+            key: {
+                text: "Threshold level",
+                classes: "govuk-body govuk-!-font-weight-regular"
+              },
+            value: {
+              text: licences[data.licenceID].conditionsThreshold| safe
+            }
+          },
+          {
+            key: {
+                text: "Other information",
+                classes: "govuk-body govuk-!-font-weight-regular"
+              },
+            value: {
+              text: licences[data.licenceID].conditionsOther| safe
+            }
+          }
+          
+        ]
+      }) }}
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

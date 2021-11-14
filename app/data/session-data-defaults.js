@@ -44,14 +44,19 @@ module.exports = {
                   "purpose": "Spray irrigation",
                   "periodOfAbstraction": "March to September",
                   "pointsOfAbstraction": "At National Grid Reference SK 675124 <br> At National Grid Reference SK 675343 <br> <a href=points.html>View details of abstraction point</a>",
-                  "abstractionConditions": "Eel screening condition <br> Flow cessation condition <br> Chemical cessation condition <br> <a href=app/views/licences/licences-table.html>View details of abstraction conditions</a>",
+                  "abstractionConditions": "Eel screening condition <br> Flow cessation condition <br> Chemical cessation condition <br> <a href=conditions.html>View details of abstraction conditions</a>",
                   "abstractionAmounts": "90 cubic metres per hour <br> 250 cubic metres per day <br> 20,000 cubnic metres per year",
                   "contactsHolder": "Bottled Water Plc",
                   "contactsAddress": "72 Guild Street <br> London <br> SE23 6FH",
                   "contactsDetails": "07700 900457 <br> waterteam@bottledwater.com",
                   "pointsAbstraction1": "At National Grid Reference SK 675 124 (GLENTHAM BOREHOLE NO.1)",
                   "pointsAbstraction2": "At National Grid Reference SK 675 343 (GLENTHAM BOREHOLE NO.2)",
-                  "pointsAbstraction3": "At National Grid Reference SK 675 241 (GLENTHAM BOREHOLE NO.3)"
+                  "pointsAbstraction3": "At National Grid Reference SK 675 241 (GLENTHAM BOREHOLE NO.3)",
+                  "conditionsScreening": "The Agency may have regard to its best practice guide, the Eel Menual: Screening at intakes and outfalls: measures to protect eel (or equivalent guidance) in agreeing where, how and what type of eel screen should be installed and together with the results of any monitoring in determining whether the eel screen is properly effective and maintained, and in judging whether it is necessary to require or replacement of the eel screen.",
+                  "conditionsPurpose": "Make-up or top up water",
+                  "conditionsGauging": "At National Grid Reference SX 426725",
+                  "conditionsThreshold": "0.73m ODN",
+                  "conditionsOther": "No abstraction shall take place from the Denton New Cut when the water level in the Cut as measured at Little Durnsford (SW 321562) is at or below 0.73m ODN."
                 },
                 {
                   "licenceNumber": "AN/02/233/003/0034",
@@ -63,14 +68,19 @@ module.exports = {
                   "purpose": "Spray irrigation",
                   "periodOfAbstraction": "March to September",
                   "pointsOfAbstraction": "At National Grid Reference SK 675124 <br> At National Grid Reference SK 675343 <br> <a href=points.html>View details of abstraction point</a>",
-                  "abstractionConditions": "Eel screening condition <br> Flow cessation condition <br> Chemical cessation condition <br> <a href=app/views/licences/licences-table.html>View details of abstraction conditions</a>",
+                  "abstractionConditions": "Eel screening condition <br> Flow cessation condition <br> Chemical cessation condition <br> <a href=conditions.html>View details of abstraction conditions</a>",
                   "abstractionAmounts": "90 cubic metres per hour <br> 250 cubic metres per day <br> 20,000 cubnic metres per year",
                   "contactsHolder": "Big Smith Farms ltd",
                   "contactsAddress": "72 Guild Street <br> London <br> SE23 6FH",
                   "contactsDetails": "07700 900457 <br> waterteam@bottledwater.com",
                   "pointsAbstraction1": "At National Grid Reference SK 675 124 (GLENTHAM BOREHOLE NO.1)",
                   "pointsAbstraction2": "At National Grid Reference SK 675 343 (GLENTHAM BOREHOLE NO.2)",
-                  "pointsAbstraction3": "At National Grid Reference SK 675 241 (GLENTHAM BOREHOLE NO.3)"
+                  "pointsAbstraction3": "At National Grid Reference SK 675 241 (GLENTHAM BOREHOLE NO.3)",
+                  "conditionsScreening": "The Agency may have regard to its best practice guide, the Eel Menual: Screening at intakes and outfalls: measures to protect eel (or equivalent guidance) in agreeing where, how and what type of eel screen should be installed and together with the results of any monitoring in determining whether the eel screen is properly effective and maintained, and in judging whether it is necessary to require or replacement of the eel screen.",
+                  "conditionsPurpose": "Make-up or top up water",
+                  "conditionsGauging": "At National Grid Reference SX 426725",
+                  "conditionsThreshold": "0.73m ODN",
+                  "conditionsOther": "No abstraction shall take place from the Denton New Cut when the water level in the Cut as measured at Little Durnsford (SW 321562) is at or below 0.73m ODN."
                 },
                 {
                   "licenceNumber": "AN/02/233/003/0093",
@@ -82,14 +92,19 @@ module.exports = {
                   "purpose": "Spray irrigation",
                   "periodOfAbstraction": "February to December",
                   "pointsOfAbstraction": "At National Grid Reference SK 675124 <br> At National Grid Reference SK 675343 <br> <a href=points.html>View details of abstraction point</a>",
-                  "abstractionConditions": "Eel screening condition <br> Flow cessation condition <br> Chemical cessation condition <br> <a href=app/views/licences/licences-table.html>View details of abstraction conditions</a>",
+                  "abstractionConditions": "Eel screening condition <br> Flow cessation condition <br> Chemical cessation condition <br> <a href=conditions.html>View details of abstraction conditions</a>",
                   "abstractionAmounts": "90 cubic metres per hour <br> 250 cubic metres per day <br> 20,000 cubnic metres per year",
                   "contactsHolder": "D. B. Beecham-Smith",
                   "contactsAddress": "72 Guild Street <br> London <br> SE23 6FH",
                   "contactsDetails": "07700 900457 <br> waterteam@bottledwater.com",
                   "pointsAbstraction1": "At National Grid Reference SK 675 124 (GLENTHAM BOREHOLE NO.1)",
                   "pointsAbstraction2": "At National Grid Reference SK 675 343 (GLENTHAM BOREHOLE NO.2)",
-                  "pointsAbstraction3": "At National Grid Reference SK 675 241 (GLENTHAM BOREHOLE NO.3)"
+                  "pointsAbstraction3": "At National Grid Reference SK 675 241 (GLENTHAM BOREHOLE NO.3)",
+                  "conditionsScreening": "The Agency may have regard to its best practice guide, the Eel Menual: Screening at intakes and outfalls: measures to protect eel (or equivalent guidance) in agreeing where, how and what type of eel screen should be installed and together with the results of any monitoring in determining whether the eel screen is properly effective and maintained, and in judging whether it is necessary to require or replacement of the eel screen.",
+                  "conditionsPurpose": "Make-up or top up water",
+                  "conditionsGauging": "At National Grid Reference SX 426725",
+                  "conditionsThreshold": "0.73m ODN",
+                  "conditionsOther": "No abstraction shall take place from the Denton New Cut when the water level in the Cut as measured at Little Durnsford (SW 321562) is at or below 0.73m ODN."
                 }
               ],
 

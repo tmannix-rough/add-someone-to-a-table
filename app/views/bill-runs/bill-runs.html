@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Customer - GOV.UK
+Bill runs - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,7 +13,7 @@ Customer - GOV.UK
 
 <!-- nav bar -->
 
-{% include "includes/nav/nav-bd-view.html" %}
+<!--{% include "includes/nav/nav-bd-view.html" %}-->
 
 <!--no back button-->
 
@@ -32,7 +32,7 @@ Customer - GOV.UK
 
     <!-- page heading -->
     <!-- <span class="govuk-caption-l">Batch 003265 / 12 June 2019</span> -->
-    <h1 class="govuk-heading-xl">Bill runs</h1>
+    <h1 class="govuk-heading-l">Bill runs</h1>
 <form method="post" novalidate>
     {{ govukButton({
       text: "Create a bill run"

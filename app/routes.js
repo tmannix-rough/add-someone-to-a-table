@@ -120,7 +120,7 @@ router.post('/contacts/remove-a-contact/youre-about-to-remove-a-contact', functi
   //set success banner to true
   req.session.data.successBanner = "true"
 
-  res.redirect('/contacts/contacts-info');
+  res.redirect('/contacts/contacts-info#contacts');
 
 });
 
