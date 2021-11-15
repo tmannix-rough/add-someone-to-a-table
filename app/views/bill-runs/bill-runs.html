@@ -6,11 +6,24 @@ Bill runs - GOV.UK
 
 {%- from "moj/components/pagination/macro.njk" import mojPagination -%}
 
-<!-- nav bar -->
+{% block beforeContent %}
 
-<!--{% include "includes/nav/nav-bd-view.html" %}-->
+<!--phase banner-->
+{% include "includes/phase-banner.html" %}
 
-<!--no back button-->
+<!--nav menu-->
+{% include "includes/nav/nav-bd-bill-runs.html" %}
+
+{% block backContent %}
+
+{% if data['navType'] == "backButton" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endif %}
+{% endblock %}
+{% endblock %}
 
 
 
@@ -61,8 +74,8 @@ Bill runs - GOV.UK
         href: '/page=3'
       }]
     }) }}
-    
-    
+
+
 
 </form>
   </div>

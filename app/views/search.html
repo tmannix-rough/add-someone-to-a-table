@@ -4,6 +4,17 @@
 Search - GOV.UK
 {% endblock %}
 
+{% block backContent %}
+{# navigation type set by navType #}
+{% if data['navType'] == "backButton" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endif %}
+{% endblock %}
+
+
 {% block content %}
 
 <!-- page title -->
@@ -18,7 +29,7 @@ Search - GOV.UK
         Name, email return reference or license
       </label>
     <form method="post" novalidate>
-      <input class="govuk-input govuk-!-width-two-thirds govuk-!-display-inline-block" id="search" name="search" type="text">    
+      <input class="govuk-input govuk-!-width-two-thirds govuk-!-display-inline-block" id="search" name="search" type="text">
 
       {{ govukButton({
         text: "Search",

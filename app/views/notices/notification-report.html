@@ -9,7 +9,40 @@
 {{title}} - GOV.UK
 {% endblock %}
 
+{% block beforeContent %}
 
+<!--phase banner-->
+{% include "includes/phase-banner.html" %}
+
+<!--nav menu-->
+{% include "includes/nav/nav-bd-manage.html" %}
+
+{% block backContent %}
+
+{% set url = "/manage" %}
+{# navigation type set by navType #}
+{% if data['navType'] == "backButton" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% elif data['navType'] == "backButtonFixed"%}
+{{ govukBackLink({
+  text: "Back to manage",
+  href: url
+}) }}
+{% elif data['navType'] == "breadcrumbs"%}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Manage",
+      href: "manage"
+    }
+  ]
+}) }}
+{% endif %}
+{% endblock %}
+{% endblock %}
 
 <!--content block-->
 {% block content %}

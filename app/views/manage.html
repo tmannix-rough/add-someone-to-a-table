@@ -5,6 +5,25 @@ Manage - GOV.UK
 {% endblock %}
 
 
+{% block beforeContent %}
+<!--phase banner-->
+{% include "includes/phase-banner.html" %}
+
+<!--nav menu-->
+{% include "includes/nav/nav-bd-manage.html" %}
+
+{% block backContent %}
+{# navigation type set by navType #}
+{% if data['navType'] == "backButton" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endif %}
+{% endblock %}
+{% endblock %}
+
+
 {% block content %}
 
 <!-- page title -->

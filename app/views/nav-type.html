@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+
+
+<!--set title-->
+{% set title = "Nav type" %}
+
+{% block pageTitle %}
+{{title}} - GOV.UK
+{% endblock %}
+
+
+{% block content %}
+
+<!--search-->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <form  method="post" action="/index" novalidate >
+
+    {{ govukRadios({
+      idPrefix: "navType",
+      name: "navType",
+      fieldset: {
+        legend: {
+          text: title,
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      items: [
+      {
+        value: "none",
+        text: "None",
+        checked: checked("navType", "none")
+      },
+        {
+          value: "backButton",
+          text: "Back button",
+          checked: checked("navType", "backButton")
+        },
+        {
+          value: "backButtonFixed",
+          text: "Back button fixed",
+          checked: checked("navType", "backButtonFixed")
+        },
+        {
+          value: "breadcrumbs",
+          text: "Breadcrumbs",
+          checked: checked("navType", "breadcrumb")
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+
+  </div>
+</div>
+
+
+{% endblock %}

@@ -4,6 +4,8 @@
 {% set index = data['notificationIndex'] %}
 
 
+
+
 <!--set page title-->
 {% set title = data.notifications[index]['notification'] |capitalize %}
 
@@ -13,22 +15,44 @@
 
 
 
-
-
-
-
-
 {% block beforeContent %}
 
-<!-- phase banner -->
+<!--phase banner-->
 {% include "includes/phase-banner.html" %}
 
-<!--no back button-->
+<!--nav menu-->
+{% include "includes/nav/nav-bd-manage.html" %}
 
+{% block backContent %}
+
+{% set url = "notification-report" %}
+{# navigation type set by navType #}
+{% if data['navType'] == "backButton" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% elif data['navType'] == "backButtonFixed"%}
+{{ govukBackLink({
+  text: "Back to notification report",
+  href: url
+}) }}
+{% elif data['navType'] == "breadcrumbs"%}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Manage",
+      href: "/manage"
+    },
+    {
+      text: "Notification report",
+      href: "notification-report"
+    }
+  ]
+}) }}
+{% endif %}
 {% endblock %}
-
-
-
+{% endblock %}
 
 
 

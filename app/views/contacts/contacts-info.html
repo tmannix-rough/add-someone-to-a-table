@@ -4,6 +4,34 @@
 Overview - GOV.UK
 {% endblock %}
 
+{% set url = "/search" %}
+
+{% block backContent %}
+{# navigation type set by navType #}
+{% if data['navType'] == "backButton" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% elif data['navType'] == "backButtonFixed"%}
+{{ govukBackLink({
+  text: "Back to search",
+  href: url
+}) }}
+{% elif data['navType'] == "breadcrumbs"%}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Search",
+      href: "search"
+    }
+  ]
+}) }}
+{% endif %}
+{% endblock %}
+
+
+
 {% block content %}
 
 
