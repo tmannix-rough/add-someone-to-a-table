@@ -2,6 +2,32 @@
 
 {% block pageTitle %}
 Licence summary - GOV.UK
+
+{% block backContent %}
+
+{% set url = "/contacts/contacts-info" %}
+{# navigation type set by navType #}
+{% if data['navType'] == "backButton" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% elif data['navType'] == "backButtonFixed"%}
+{{ govukBackLink({
+  text: "Back to licences",
+  href: url
+}) }}
+{% elif data['navType'] == "breadcrumbs"%}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Licences",
+      href: "/contacts/contacts-info"
+    }
+  ]
+}) }}
+{% endif %}
+{% endblock %}
 {% endblock %}
 
 {% block content %}

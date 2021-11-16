@@ -2,6 +2,36 @@
 
 {% block pageTitle %}
 Points of abstraction - GOV.UK
+
+{% block backContent %}
+
+{% set url = "licence-summary" %}
+{# navigation type set by navType #}
+{% if data['navType'] == "backButton" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% elif data['navType'] == "backButtonFixed"%}
+{{ govukBackLink({
+  text: "Back to licence summary",
+  href: url
+}) }}
+{% elif data['navType'] == "breadcrumbs"%}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Licences",
+      href: "/contacts/contacts-info"
+    },
+    {
+      text: "Licence summary",
+      href: "licence-summary"
+    }
+  ]
+}) }}
+{% endif %}
+{% endblock %}
 {% endblock %}
 
 {% block content %}
