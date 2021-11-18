@@ -21,6 +21,18 @@ module.exports = {
 
   // Insert values here
 
+  "search": "",
+
+  //Customer/Company
+    "customerID": "0",
+
+    //Customer/Company
+    "customers": [{
+        "name": "Bottled Water Plc",
+        "WAA": "post",
+      },
+    ],
+
 
   "contacts": [
                 {
@@ -39,6 +51,7 @@ module.exports = {
                   "licenceName": "Glindenfold Lake",
                   "startDate": "1 January 2019",
                   "endDate": "31 December 2029",
+                  "holder": "Bottled Water Plc",
                   "licenceHolder": "Bottled Water Plc  <br> <a href=/contacts/contacts-info#contacts>View contacts</a>",
                   "sourceOfSupply": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
                   "purpose": "Spray irrigation",
@@ -63,6 +76,7 @@ module.exports = {
                   "licenceName": "Bourton river",
                   "startDate": "1 January 2017",
                   "endDate": "31 December 2025",
+                  "holder": "Bottled Water Plc",
                   "licenceHolder": "Bottled Water Plc  <br> <a href=/contacts/contacts-info#contacts>View contacts</a>",
                   "sourceOfSupply": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
                   "purpose": "Spray irrigation",
@@ -87,6 +101,7 @@ module.exports = {
                   "licenceName": "Honeydew Crescent",
                   "startDate": "5 September 2020",
                   "endDate": "15 September 2034",
+                  "holder": "Bottled Water Plc",
                   "licenceHolder": "Bottled Water Plc  <br> <a href=/contacts/contacts-info#contacts>View contacts</a>",
                   "sourceOfSupply": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
                   "purpose": "Spray irrigation",
@@ -116,7 +131,7 @@ module.exports = {
                 "billRunsType": "Annual",
                 "billRunsBills": "1",
                 "billRunsValue": "£1,000",
-                "billRunsStatus": "Rejected",
+                "billRunsStatus": "error",
               },
               {
                 "billRunsDate": "8 January 2020",
@@ -148,7 +163,7 @@ module.exports = {
                 "billRunsType": "Supplementary",
                 "billRunsBills": "20",
                 "billRunsValue": "£18,000",
-                "billRunsStatus": "Rejected",
+                "billRunsStatus": "error",
               },
               {
                 "billRunsDate": "22 December 2020",

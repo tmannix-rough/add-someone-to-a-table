@@ -4,7 +4,7 @@
 Overview - GOV.UK
 {% endblock %}
 
-{% set url = "/search" %}
+{% set url = "/search?search=" %}
 
 {% block backContent %}
 {# navigation type set by navType #}
@@ -23,7 +23,7 @@ Overview - GOV.UK
   items: [
     {
       text: "Search",
-      href: "search"
+      href: url
     }
   ]
 }) }}

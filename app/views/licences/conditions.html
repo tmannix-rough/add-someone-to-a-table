@@ -21,8 +21,8 @@ Abstraction conditions - GOV.UK
 {{ govukBreadcrumbs({
   items: [
     {
-      text: "Licences",
-      href: "/contacts/contacts-info"
+      text: "Search",
+      href: "/search?search="
     },
     {
       text: "Licence summary",
@@ -62,7 +62,7 @@ Abstraction conditions - GOV.UK
             text: licences[data.licenceID].conditionsScreening| safe
           }
         }
-        
+
       ]
     }) }}
     <h2 class="govuk-heading-m">Hands off flow condition</h2>
@@ -104,7 +104,7 @@ Abstraction conditions - GOV.UK
               text: licences[data.licenceID].conditionsOther| safe
             }
           }
-          
+
         ]
       }) }}
 </div>

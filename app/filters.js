@@ -52,13 +52,13 @@ module.exports = function (env) {
         return "govuk-tag--green"
       } else if (e == "something") {
         return "govuk-tag--turquoise"
-      } else if (e == "Pending") {
-        return "govuk-tag--blue"
       } else if (e == "ready") {
+        return "govuk-tag--blue"
+      } else if (e == "pending") {
         return "govuk-tag--purple"
       } else if (e == "Sent") {
         return "govuk-tag--pink"
-      } else if (e == "Rejected") {
+      } else if (e == "error") {
         return "govuk-tag--red"
       } else if (e == "Declined") {
         return "govuk-tag--orange"

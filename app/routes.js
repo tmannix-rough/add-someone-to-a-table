@@ -7,6 +7,31 @@ router.use('/notices', require('./views/_routes/_routes-notices'));
 
 // Add your routes here - above the module.exports line
 
+
+////////SEARCH
+
+//Search term
+router.get('/search', function(req, res) {
+
+  req.session.data.back = req.headers.referer
+
+  res.render('search');
+
+});
+
+router.post('/search', function(req, res) {
+
+
+res.redirect('search');
+
+});
+
+
+
+
+
+
+
 ///Contact table
 router.get('/contacts/contacts-info', function(req, res) {
 

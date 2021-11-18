@@ -5,7 +5,7 @@ Licence summary - GOV.UK
 
 {% block backContent %}
 
-{% set url = "/contacts/contacts-info" %}
+{% set url = "/search?search=" %}
 {# navigation type set by navType #}
 {% if data['navType'] == "backButton" %}
 {{ govukBackLink({
@@ -14,15 +14,15 @@ Licence summary - GOV.UK
 }) }}
 {% elif data['navType'] == "backButtonFixed"%}
 {{ govukBackLink({
-  text: "Back to licences",
+  text: "Back to search",
   href: url
 }) }}
 {% elif data['navType'] == "breadcrumbs"%}
 {{ govukBreadcrumbs({
   items: [
     {
-      text: "Licences",
-      href: "/contacts/contacts-info"
+      text: "Search",
+      href: "/search?search="
     }
   ]
 }) }}
